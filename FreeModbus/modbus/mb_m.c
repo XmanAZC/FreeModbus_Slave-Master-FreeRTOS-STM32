@@ -282,7 +282,6 @@ eMBMasterPoll(void * this)
 
         case EV_MASTER_EXECUTE:
         EV_MASTER_EXECUTE_LABLE:
-            ucMBFrame = (UCHAR *)&(p->ucMasterRTUSndBuf[MB_SER_PDU_PDU_OFF]);
             ucFunctionCode = ucMBFrame[MB_PDU_FUNC_OFF];
             eException = MB_EX_ILLEGAL_FUNCTION;
             /* If receive frame has exception .The receive function code highest bit is 1.*/
